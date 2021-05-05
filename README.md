@@ -10,3 +10,4 @@ I've learned:
 Things I need to work on:
   - Being able to predict ordering issues before running
   - Generating a GUI
+  - Creating an error message -- user cannot continue until the enter a valid input
