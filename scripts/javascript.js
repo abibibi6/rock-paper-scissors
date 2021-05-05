@@ -1,11 +1,11 @@
-//randomly returns rock, paper, or scissors
+//randomly returns rock, paper, or scissors as computerPlay
 function computerPlay(items){
     return items[Math.floor(Math.random()*items.length)];
 }
 let items = ["Rock", "Scissors", "Paper"];
 
 //accepts playerSelection parameters, returning a number value and displays a string with the
-//winner's info. Only plays one round
+//winner's info. Only accepts "rock, paper, scissors. Only plays one round
 function gameTime(playerSelection, computerSelection){
     let lowerCase = playerSelection.toLowerCase();
     let playerSelection2 = playerSelection.charAt(0).toUpperCase() + lowerCase.slice(1);
@@ -42,15 +42,14 @@ function gameTime(playerSelection, computerSelection){
     }
 }
 
-//displays gameTime function result in the console
-// console.log(gameTime(playerSelection, computerSelection));
+//runs the game give times and counts points. Returns total points.
 function gameFiveTimes(){
     point1 = gameTime(window.prompt("Rock, paper, or scissors?"), computerPlay(items));
     point2 = gameTime(window.prompt("Rock, paper, or scissors?"), computerPlay(items));
     point3 = gameTime(window.prompt("Rock, paper, or scissors?"), computerPlay(items));
     point4 = gameTime(window.prompt("Rock, paper, or scissors?"), computerPlay(items));
     point5 = gameTime(window.prompt("Rock, paper, or scissors?"), computerPlay(items));
-    return point1 + point2 + point3 + point4 + point5;
+    return point1 + point2 + point3 + point4 + point5;;
 }
 
 //displays a message dependant on the total amount of points user received
